@@ -13,8 +13,7 @@
 
 1. 把整个文件夹丢进 `ComfyUI/custom_nodes/`
 2. 重启 ComfyUI
-3. 把仓库里那张 **`示例workflow_拖入comfyui.png`** 直接拖进 ComfyUI 窗口 —— 工作流就出来了
-4. 在节点面板搜索 `sampling/krea2`，找到「**Krea2 多尺度采样器**」
+3. 在节点面板搜索 `sampling/krea2`，找到「**Krea2 多尺度采样器**」
 
 它长得和 KSampler 一样，**直接替换掉原来的 KSampler 就行**，model / positive / negative / latent 四根线一一对应，别的不动。
 
@@ -40,7 +39,7 @@
 - 只测了 **8 步的 Turbo 蒸馏模型**，Raw（52 步）没验证
 - `split_step` 不要超过总步数的一半，否则后段步数太少接不住
 - 低显存卡建议 `low_scale` 保持 0.5，再低容易出现构图崩坏
-- 示例图里的工作流用到了 **Comfyroll Studio**（CR LoRA Stack）等第三方节点，缺的话用 ComfyUI Manager 装一下；只想要这个节点的话，自己拖一个 KSampler 替换成它就行
+- 节点本身零依赖，只用 ComfyUI 自带的东西。但如果你原来的工作流用了 Comfyroll Studio 之类的第三方节点，那些还是要装的
 
 ## 和 SelfLift 的关系
 
